@@ -1,4 +1,4 @@
-package th.co.geniustree.springkerberos.demo;
+package cz.datalite.kerberos.sso.demo;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -8,7 +8,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.annotation.web.servlet.configuration.EnableWebMvcSecurity;
 import org.springframework.security.kerberos.authentication.KerberosServiceAuthenticationProvider;
 import org.springframework.security.kerberos.authentication.sun.SunJaasKerberosTicketValidator;
 import org.springframework.security.kerberos.client.config.SunJaasKrb5LoginConfig;
@@ -23,7 +22,6 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import org.springframework.util.Assert;
 
 @Configuration
-@EnableWebMvcSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Value("${app.ad-domain}")

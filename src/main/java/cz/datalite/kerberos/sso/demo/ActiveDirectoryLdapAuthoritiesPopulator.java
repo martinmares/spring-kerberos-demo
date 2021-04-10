@@ -1,4 +1,4 @@
-package th.co.geniustree.springkerberos.demo;
+package cz.datalite.kerberos.sso.demo;
 
 import org.springframework.ldap.core.DirContextOperations;
 import org.springframework.ldap.core.DistinguishedName;
@@ -20,7 +20,7 @@ public class ActiveDirectoryLdapAuthoritiesPopulator implements LdapAuthoritiesP
             return AuthorityUtils.NO_AUTHORITIES;
         }
 
-        ArrayList<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>(
+        ArrayList<GrantedAuthority> authorities = new ArrayList<>(
                 groups.length);
 
         for (String group : groups) {

@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
     <head>
         <title>Spring Security Kerberos Example</title>
     </head>
     <body>
-        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-        <h1 th:inline="text">User principal is [[${#httpServletRequest.userPrincipal}]]!</h1>
+        <h1 th:inline="text">Authenticated!</h1>
+        <div sec:authorize="isAuthenticated()">
+            Authenticated as: <b>[[${#httpServletRequest.remoteUser}]]</b></div>
+        </p>
+        <div sec:authorize="isAuthenticated()">
+            User principal is: <b>[[${#httpServletRequest.userPrincipal}]].</b></div>
+        </p>
+        <div sec:authorize="isAuthenticated()">
+            <b>Text visible only to authenticated users.</b>
+        </div>
     </body>
 </html>
