@@ -1,5 +1,6 @@
-6daserver:
-    port: 8080
+server:
+  port: 8080
+
 app:
     ad-domain: AD.CLUSTER
     ad-server: ldap://DC.AD.CLUSTER
@@ -7,6 +8,7 @@ app:
     keytab-location: /Users/mares/tmp/Code-Addict-Repos/active-directory/conf/tomcat.keytab
     ldap-search-base: dc=AD,dc=CLUSTER
     ldap-search-filter: "(| (userPrincipalName={0}) (sAMAccountName={0}))"
+
 spring:
   main:
     allow-bean-definition-overriding: true

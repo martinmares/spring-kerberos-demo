@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<spring-kerberos-demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "cz.datalite.kerberos.sso.demo.Application",
+            "projectName": "spring-kerberos-demo",
+            "args": ""
+        }
+    ]
+}
